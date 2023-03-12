@@ -5,40 +5,40 @@
 }
 
 <div class="text-center">
-    <div class="card" style=" margin-top: 20px">
+    <div class="card bg-success bg-opacity-10" style=" margin-top: 20px">
         <div class="card-header">
             <h1>Skanky Old Buses - Destination and Cost</h1>
          
         
         </div>
-        <div class="card-body">
+        <div class="card-body ">
                        <form method="post">
                 <div class="form-group">    
                     <div class="row">
                         <label asp-for="busData.FName" class="col-lg-2 fw-bold text-primary"></label>
-                        <input asp-for="busData.FName" class="col-lg-2"/>
+                        <input  type="text" asp-for="busData.FName" class="col-lg-2"/>
                         <label asp-for="busData.LName" class="col-lg-2 fw-bold text-primary"></label>
-                        <input asp-for="busData.LName"class="col-lg-2" />
+                        <input type="text" asp-for="busData.LName"class="col-lg-2" />
                         <label asp-for="busData.IsDisabled" class="col-lg-2 text-danger"></label>
                         <input  asp-for="busData.IsDisabled" class="form-check-input" type="checkbox" value="" class="col-lg-2" />
                     </div>   
                     <div class="row">
                         <label asp-for="busData.Ash" class="col-lg-2 text-success" ></label>
-                        <input  type="number" asp-for="busData.Ash" class="col-lg-2" />
+                        <input  type="number" asp-for="@Model.busData.Ash" class="col-lg-2"  value="17.99"/>
                         <label asp-for="busData.Dun" class="col-lg-2 text-success"></label>
-                        <input  type="number" asp-for="busData.Dun" class="col-lg-2" />
+                        <input  type="number" asp-for="@Model.busData.Dun" class="col-lg-2"  value="35.66"/>
                         <label asp-for="busData.Age" class="col-lg-2 text-danger"></label>
                         <input type="number" asp-for="busData.Age" class="col-lg-2" />
                     </div>   
                     <div class="row">
-                        <label asp-for="busData.Tim" class="col-lg-2 text-success"></label>
-                        <input  type="number" asp-for="busData.Tim" class="col-lg-2" />
+                        <label asp-for="busData.Tim" class="col-lg-2 text-success"  value="24.77"></label>
+                        <input  type="number" asp-for="busData.Tim" class="col-lg-2"  value="24.77"/>
                         <label asp-for="busData.Inv" class="col-lg-2 text-success"></label>
-                        <input  type="number" asp-for="busData.Inv" class="col-lg-2" />
+                        <input  type="number" asp-for="busData.Inv" class="col-lg-2"  value="46.00"/>
                         <label asp-for="busData.Discount" class="col-lg-2 text-danger"></label>
-                        <input  type="number" asp-for="busData.Discount" class="col-lg-2" />
+                        <input  type="number" asp-for="busData.Discount" class="col-lg-2"  value="0.20"/>
                         <label asp-for="busData.Om" class="col-lg-2 text-success"></label>
-                        <input  type="number" asp-for="busData.Om" class="col-lg-2" />
+                        <input  type="number" asp-for="busData.Om" class="col-lg-2"   value="24.44"/>
 
                     </div>
                     <div class="row">
@@ -47,11 +47,11 @@
                 </div>
 </form>
         </div>
-        <div class="card-footer">
-            <h3>Footer</h3>
+        <div class="card-footer align-content-start">
+            <h3>All fares</h3>
 
             <div class="row">
-                <p class="card-text">Add stuff here</p>
+                <p class="card-text">City Fares</p>
             </div>
         </div>
     </div>
