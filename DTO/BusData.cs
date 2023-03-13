@@ -25,8 +25,8 @@ namespace BusProject2023Students.DTO
 
         [Display(Name = "Are you Disabled?")]
         public bool IsDisabled { get; set; } = false;
-        [Display(Name = "Is this the Weekend?")]
-        public bool IsWeekend { get; set; } = false;
+        //  [Display(Name = "Is this the Weekend?")]
+        //  public bool IsWeekend { get; set; } = false;
 
 
         //Details

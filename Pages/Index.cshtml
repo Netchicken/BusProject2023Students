@@ -1,66 +1,67 @@
 ﻿@page
 @model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+    @using BusProject2023Students.DTO;
+    @{
+        ViewData["Title"] = "Home page";
+    }
 
-<div class="text-center">
-    <div class="card bg-success bg-opacity-10" style=" margin-top: 20px">
-        <div class="card-header">
-            <div class="row">
-            <div class="col  align-middle"> <h1>Skanky Old Buses - Destination and Cost</h1></div>
-            <div class="col"> <img src="~/images/bus.png" class="float-end w-50 border-3 border-dark bg-dark" /></div>
-            </div>
-           
-        
-        
-        </div>
-        <div class="card-body ">
-                       <form method="post">
-                <div class="form-group">    
-                    <div class="row">
-                        <label asp-for="busData.FName" class="col-lg-2 fw-bold text-primary"></label>
-                        <input  type="text" asp-for="busData.FName" class="col-lg-2"/>
-                        <label asp-for="busData.LName" class="col-lg-2 fw-bold text-primary"></label>
-                        <input type="text" asp-for="busData.LName"class="col-lg-2" />
-                        <label asp-for="busData.IsDisabled" class="col-lg-2 text-danger"></label>
-                        <input  asp-for="busData.IsDisabled" class="form-check-input" type="checkbox" value="" class="col-lg-2" />
-                    </div>   
-                    <div class="row">
-                        <label asp-for="busData.Ash" class="col-lg-2 text-success" ></label>
-                        <input  type="number" asp-for="@Model.busData.Ash" class="col-lg-2"  value="17.99"/>
-                        <label asp-for="busData.Dun" class="col-lg-2 text-success"></label>
-                        <input  type="number" asp-for="@Model.busData.Dun" class="col-lg-2"  value="35.66"/>
-                        <label asp-for="busData.Age" class="col-lg-2 text-danger"></label>
-                        <input type="number" asp-for="busData.Age" class="col-lg-2" />
-                    </div>   
-                    <div class="row">
-                        <label asp-for="busData.Tim" class="col-lg-2 text-success"  value="24.77"></label>
-                        <input  type="number" asp-for="busData.Tim" class="col-lg-2"  value="24.77"/>
-                        <label asp-for="busData.Inv" class="col-lg-2 text-success"></label>
-                        <input  type="number" asp-for="busData.Inv" class="col-lg-2"  value="46.00"/>
-                        <label asp-for="busData.Discount" class="col-lg-2 text-danger"></label>
-                        <input  type="number" asp-for="busData.Discount" class="col-lg-2"  value="0.20"/>
-                        <label asp-for="busData.Om" class="col-lg-2 text-success"></label>
-                        <input  type="number" asp-for="busData.Om" class="col-lg-2"   value="24.44"/>
-
-                    </div>
-                    <div class="row">
-                        <input type="submit" value="Submit" asp-action="Index" />
-                    </div>
+    <div class="text-center">
+        <div class="card bg-success bg-opacity-10" style=" margin-top: 20px">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col  align-middle"> <h1>Skanky Old Buses - Destination and Cost</h1></div>
+                    <div class="col"> <img src="~/images/bus.png" class="float-end w-50 border-3 border-dark bg-dark" /></div>
                 </div>
-</form>
-        </div>
-        <div class="card-footer align-content-start">
-            <h3>All fares</h3>
 
-            <div class="row">
-                <p class="card-text">City Fares</p>
+
+
+            </div>
+            <div class="card-body ">
+                <form method="post">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="busData.FName" class="col-lg-2 fw-bold text-primary"></label>
+                            <input type="text" asp-for="busData.FName" class="col-lg-2" />
+                            <label asp-for="busData.LName" class="col-lg-2 fw-bold text-primary"></label>
+                            <input type="text" asp-for="busData.LName" class="col-lg-2" />
+                            <label asp-for="busData.IsDisabled" class="col-lg-2 text-danger"></label>
+                            <input asp-for="busData.IsDisabled" class="form-check-input" type="checkbox" value="" class="col-lg-2" />
+                        </div>
+                        <div class="row">
+                            <label asp-for="busData.Ash" class="col-lg-2 text-success"></label>
+                            <input type="number" asp-for="@Model.busData.Ash" class="col-lg-2" />
+                            <label asp-for="busData.Dun" class="col-lg-2 text-success"></label>
+                            <input type="number" asp-for="@Model.busData.Dun" class="col-lg-2"  />
+                            <label asp-for="busData.Age" class="col-lg-2 text-danger"></label>
+                            <input type="number" asp-for="busData.Age" class="col-lg-2" />
+                        </div>
+                        <div class="row">
+                            <label asp-for="busData.Tim" class="col-lg-2 text-success"></label>
+                            <input type="number" asp-for="busData.Tim" class="col-lg-2" />
+                            <label asp-for="busData.Inv" class="col-lg-2 text-success"></label>
+                            <input type="number" asp-for="busData.Inv" class="col-lg-2"  />
+                            <label asp-for="busData.Discount" class="col-lg-2 text-danger"></label>
+                            <input type="number" asp-for="busData.Discount" class="col-lg-2" />
+                            <label asp-for="busData.Om" class="col-lg-2 text-success"></label>
+                            <input type="number" asp-for="busData.Om" class="col-lg-2"  />
+
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Submit" asp-action="Index" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer align-content-start">
+                <h3>All fares</h3>
+
+                <div class="row">
+                    <p class="card-text">City Fares    @Model.Output</p>
+                </div>
             </div>
         </div>
+
+
+
+
     </div>
-
-
-
-
-</div>

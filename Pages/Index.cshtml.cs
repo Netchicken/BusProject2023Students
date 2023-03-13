@@ -9,8 +9,8 @@ namespace BusProject2023Students.Pages
     public class IndexModel : PageModel
     {
 
-        public BusData busData { get; set; }
-
+        public BusData busData = new BusData();
+        public string Output { get; set; }
 
         public void OnGet()
         {
@@ -19,7 +19,18 @@ namespace BusProject2023Students.Pages
 
         public void OnPost()
         {
+            if (busData.Age <= busData.lowerAgeDiscount || busData.Age > busData.UpperAgeDiscount)
+            {
 
+                busData.Ash = busData.Ash - (busData.Ash * busData.Discount);
+                busData.Tim = busData.Tim - (busData.Tim * busData.Discount);
+                Output = "Discount  " + busData.Ash;
+            }
+            else
+            {
+                Output = "full fare";
+
+            }
 
         }
     }
